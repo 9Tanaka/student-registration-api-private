@@ -140,7 +140,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_0rnr}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -148,12 +148,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/students/663020003",
-              "protocol": "http",
+              "raw": "{{base_url}}/api/students/663020003",
               "host": [
-                "localhost"
+                "{{base_url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "students",
@@ -166,8 +164,29 @@
         {
           "name": "TC05 - Student_nonDatabase",
           "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
             "method": "GET",
-            "header": []
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/students/9999999",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students",
+                "9999999"
+              ]
+            }
           },
           "response": []
         }
@@ -184,7 +203,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -213,7 +232,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -242,7 +261,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -271,7 +290,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -305,7 +324,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -342,7 +361,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -379,7 +398,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -416,7 +435,7 @@
               "bearer": [
                 {
                   "key": "token",
-                  "value": "{{json_web_token_14e0}}",
+                  "value": "{{token}}",
                   "type": "string"
                 }
               ]
@@ -454,14 +473,7 @@
           "name": "TC12 - Delete-course of student",
           "request": {
             "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "",
-                  "type": "string"
-                }
-              ]
+              "type": "noauth"
             },
             "method": "DELETE",
             "header": [],
