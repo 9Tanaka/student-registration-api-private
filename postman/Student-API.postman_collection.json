@@ -57,7 +57,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status OK\", function () {\r\n  pm.response.to.have.status (200);\r\n});\r\npm.test(\"Response time is less than 100ms\", () => {\r\n  pm.expect(pm.response.responseTime).to.be.below(100);\r\n});"
+                  "pm.test(\"Status Unauthorized\", function () {\r\n    pm.response.to.have.status(401);\r\n});\r\npm.test(\"Response time is less than 100ms\", () => {\r\n  pm.expect(pm.response.responseTime).to.be.below(100);\r\n});"
                 ]
               }
             }
@@ -96,7 +96,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Status OK\", function () {\r\n  pm.response.to.have.status (200);\r\n});\r\npm.test(\"Response time is less than 100ms\", () => {\r\n  pm.expect(pm.response.responseTime).to.be.below(100);\r\n});"
+                  "pm.test(\"Status Bad Request\", function () {\r\n    pm.response.to.have.status(400);\r\n});\r\npm.test(\"Response time is less than 100ms\", () => {\r\n  pm.expect(pm.response.responseTime).to.be.below(100);\r\n});"
                 ]
               }
             }
